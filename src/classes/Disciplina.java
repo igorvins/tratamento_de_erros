@@ -28,14 +28,14 @@ public class Disciplina {
         if (professor == null)
             System.out.printf("%s\t\t-vazio-\n", prefixo);
         else
+        	
+//AO CHAMAR professor.imprimir ESTAMOS CHAMANDO UM METODO ABSTRATO VAZIO DA CLASSE
+//PESSOA, ISSO ESTA CORRETO?
         	try {professor.Imprimir(prefixo + "\t\t");}
         	catch(Exception e){e.getMessage();}
         System.out.printf("%s\tAlunos:\n", prefixo);
         if (alunos.size() > 0) {
-            for (Pessoa a: alunos) {
-            	
-//AO CHAMAR a.imprimir ESTAMOS CHAMANDO UM METODO ABSTRATO VAZIO DA CLASSE
-//PESSOA, ISSO ESTA CORRETO?
+            for (Pessoa a: alunos) {       	
             	try {a.Imprimir(prefixo + "\t\t");}
             	catch(Exception e) {e.getMessage();}
             }
